@@ -1,0 +1,62 @@
+<html>
+<head>
+	<title>Color Net</title>
+    <link rel="stylesheet" type="text/css" href="colorSorter.css">
+</head>
+<body>
+    <h1>Color Net</h1>
+        <p>
+                Welcome to Color Net. This is a program that uses a JavaScript neural net called Brain.js. 
+                Brain.js is an open source neural net that was developed by MIT and is available to everyone on NPM. 
+        </p>
+        <p>
+                Color Net uses the user input to train the neural net in color detection. 
+                You, the user, will be shown a serious of colors and be asked to rate them from 0% to 100%. 
+                You can pick whatever color you want. For example, say you pick red. 
+                You decide how close each random color that will appear on screen is to red. 
+                Once you have completed 15 rounds there will be a button that says, "train net." 
+                Once you click this button a serious of functions will take place. 
+                First, the neural net will be fed all the data you just inputted. 
+                This trains the neural net. Next, the net will receive a bunch of random colors, much like you did in the test. 
+                As the neural net is receiving these colors it is giving an output on each of the colors. 
+                The output is between 0 and 1, which translates from 0% to 100%. If the output is over 65% the color is kept. 
+                This will take place 60 times. 
+                Once 60 colors have been picked, all colors will be displayed at the bottom of the page with the percent value the neural net gave to them.
+        </p>
+    <div class="container">
+        <button id="start">Start</button>
+    </div>
+    <br>
+    <div id="roundDisplay">
+        <h3>Number of Rounds: <span id="rounds"></span></h3>   
+    </div>
+    <div>
+        <div class="square"></div>
+    </div>
+    <br>
+    <div class="container" id="inputButtons">
+        <button class="selectorBtn" id="zero" value="0"><span class="spanClass" id="span0">0%</span></button>
+        <button class="selectorBtn" id="one"value="0.1"><span class="spanClass" id="span1">10%</span></button>
+        <button class="selectorBtn" id="two"value="0.2"><span class="spanClass" id="span2">20%</span></button>
+        <button class="selectorBtn" id="three"value="0.3"><span class="spanClass" id="span3">30%</span></button> 
+        <button class="selectorBtn" id="four"value="0.4"><span class="spanClass" id="span4">40%</span></button>
+        <button class="selectorBtn" id="five"value="0.5"><span class="spanClass" id="span5">50%</span></button>
+        <button class="selectorBtn" id="six"value="0.6"><span class="spanClass" id="span6">60%</span></button>
+        <button class="selectorBtn" id="seven"value="0.7"><span class="spanClass" id="span7">70%</span></button>
+        <button class="selectorBtn" id="eight"value="0.8"><span class="spanClass" id="span8">80%</span></button>
+        <button class="selectorBtn" id="nine"value="0.9"><span class="spanClass" id="span9">90%</span></button>
+        <button class="selectorBtn" id="ten"value="1"><span class="spanClass" id="span10">100%</span></button>
+    </div>
+
+    <div class="container">
+        <button id="train">Train Net</button>   
+    </div>
+    
+
+    <div id="main" class="grid">
+        <!-- Where the colors will be displayed -->
+    </div>
+    
+    <script type="text/javascript" src="browser.js"></script>
+    <script type="text/javascript" src="colorSorter.js"></script>
+</body>

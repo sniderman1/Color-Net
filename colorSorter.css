@@ -1,0 +1,134 @@
+h1{
+	text-align: center;
+	font-size: 50px;
+}
+
+.square {
+    width: 25%;
+    margin: 0 auto;
+    background: white;
+	padding-bottom: 200px;
+	border-radius: 25px;
+
+}
+
+.container {
+	margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+	contain: content;
+	font-size: 0;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+	grid-auto-rows: 1fr;
+  }
+  
+  .grid::before {
+	content: '';
+	width: 0;
+	padding-bottom: 100%;
+	grid-row: 1 / 1;
+	grid-column: 1 / 1;
+  }
+  
+  .grid > *:first-child {
+	grid-row: 1 / 1;
+	grid-column: 1 / 1;
+  }
+  
+  /* Just to make the grid visible */
+  
+  .grid > * {
+	background: rgba(0,0,0,0.1);
+	border: 1px white solid;
+  }
+
+  .square2{
+	  text-align: center;
+	  color: white;
+  }
+
+.selectorBtn{
+    width: 9%;
+    border: none;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 12;
+}
+
+.selectorBtn:hover {
+	background-color: #4CAF50; /* Green */
+	color: white;
+  }
+
+.spanClass{
+	visibility: hidden;
+}
+
+#zero:hover #span0{
+	visibility: visible;
+}
+#one:hover #span1{
+	visibility: visible;
+}
+#two:hover #span2{
+	visibility: visible;
+}
+#three:hover #span3{
+	visibility: visible;
+}
+#four:hover #span4{
+	visibility: visible;
+}
+#five:hover #span5{
+	visibility: visible;
+}
+#six:hover #span6{
+	visibility: visible;
+}
+#seven:hover #span7{
+	visibility: visible;
+}
+#eight:hover #span8{
+	visibility: visible;
+}
+#nine:hover #span9{
+	visibility: visible;
+}
+#ten:hover #span10{
+	visibility: visible;
+}
+
+#train{
+	width: 50%;
+    margin: 20px;
+    padding: 5px;
+	margin-left: 25%;
+	display: none;
+}
+
+#start{
+	width: 50%;
+    margin: 20px;
+    padding: 5px;
+	margin-left: 25%;
+}
+
+#inputButtons{
+	visibility: hidden;
+}
+
+p{
+	text-align: center;
+	max-width: 80%;
+	margin: 20 auto;
+	font-size: large;
+}
+
+#roundDisplay{
+	text-align: center;
+	visibility: hidden;
+}
